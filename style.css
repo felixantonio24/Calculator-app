@@ -1,0 +1,158 @@
+*{
+    font-family: 'Fraunces', serif;
+    color: rgb(63, 50, 50);  
+}
+/*Usare como medida lo siguiente, que es más que una idea general
+*,
+*::after,
+*::before {
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*/
+body{
+    margin: 0;
+    background-color: #e5ebe7;
+    background-image: url(img/ocean-g8e0553498_1280.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+.tittle {
+    font-size: 51px;
+    font-family: sans-serif;
+    font-weight: medium;
+    display: flex;
+    justify-content: center;
+    position: relative; /* Añade posicionamiento relativo */
+    top: 70px; /* Cambia el valor según sea necesario */
+    color: #e5ebe7;
+    text-shadow: 10px 50px 50px 20px  #f30000;
+ 
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #999796;
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 10px 0px 5px #050505;
+}
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #e1e0e0;
+    box-shadow: 5px 5px 10px -3px #0a0707, -5px -5px 15px 3px #00ffc11f;
+}
+
+button:active {
+    background-color: #b1d8ce;
+}
+
+button:focus {
+    outline: none;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.display {
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #baafaf;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+#valor-actual {
+    font-size: 1.5em;
+}
+
+#valor-anterior {
+    font-size: 2em;
+}
+
+@media only screen and (max-width: 767px) {
+    .tittle {
+        font-size: 30px;
+        top: 20px;
+    }
+
+    .calculadora {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: 120px repeat(5, 60px);
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    .display {
+        font-size: 1em;
+        margin: 5px 5px 10px;
+    }
+
+    #valor-actual {
+        font-size: 1em;
+    }
+
+    #valor-anterior {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 328px) {
+    .tittle {
+        font-size: 30px;
+        top: 20px;
+    }
+
+    .calculadora {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: 120px repeat(5, 60px);
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    .display {
+        font-size: 1em;
+        margin: 5px 5px 10px;
+    }
+
+    #valor-actual {
+        font-size: 1em;
+    }
+
+    #valor-anterior {
+        font-size: 1.5em;
+    }
+}
+
